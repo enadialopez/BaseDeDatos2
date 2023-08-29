@@ -5,4 +5,9 @@ class Compilador:
     maquinaVirtual = MaquinaVirtual()
     
     def parsear(self, query):
-        self.maquinaVirtual.ejecutar(query)
+        if query.startswith("."):
+            self.ejecutarMetacomando(query)
+        else:
+            self.ejecutarSentenciaSQL(query.upper())
+    
+    

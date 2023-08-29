@@ -1,10 +1,4 @@
 class MaquinaVirtual:
-
-    def ejecutar(self, query):
-        if query.startswith("."):
-            self.ejecutarMetacomando(query)
-        else:
-            self.ejecutarSentenciaSQL(query.upper())
     
     def ejecutarMetacomando(self, query):
         if query == ".exit":
