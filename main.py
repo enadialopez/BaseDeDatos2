@@ -1,7 +1,11 @@
 from compilador import Compilador
+from maquinaVirtual import MaquinaVirtual
+from tabla import Tabla
 
 def correrRepl():
-    compilador = Compilador()
+    tabla = Tabla()
+    maquinaVirtual = MaquinaVirtual(tabla)
+    compilador = Compilador(maquinaVirtual)
 
     query = input("sql>")
     while query is not None:

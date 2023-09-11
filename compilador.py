@@ -2,7 +2,8 @@ from maquinaVirtual import MaquinaVirtual
 
 class Compilador:
 
-    maquinaVirtual = MaquinaVirtual()
+    def __init__(self, maquinaVirtual):
+        self.maquinaVirtual = maquinaVirtual
     
     def parsear(self, query):
         if query.startswith("."):
