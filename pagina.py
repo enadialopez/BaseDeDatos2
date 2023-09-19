@@ -11,4 +11,13 @@ class Pagina:
     def estaCompleta(self):
         return len(self.datos) == self.CANTIDADMAXDEDATO
     
-    
+    def obtener_registros(self):
+        posicionInicial = 0
+        registros = []
+        while posicionInicial < len(self.datos):
+            registro = self.datos[posicionInicial:posicionInicial+self.CANTIDADMAXDEDATO]
+            registros.append(registro)
+            posicionInicial += self.CANTIDADMAXDEDATO
+        return registros
+
+            

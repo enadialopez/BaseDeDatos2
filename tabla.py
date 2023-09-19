@@ -54,3 +54,9 @@ class Tabla:
 
     def ultimaPagina(self):
         return self.paginas[-1]
+    
+    def obtenerTodosLosRegistros(self):
+        registros = []
+        for pagina in self.paginas:
+            registros.extend(pagina.obtener_registros())
+        return registros

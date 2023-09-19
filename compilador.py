@@ -1,5 +1,3 @@
-from maquinaVirtual import MaquinaVirtual
-
 class Compilador:
 
     def __init__(self, maquinaVirtual):
