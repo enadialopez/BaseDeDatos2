@@ -1,8 +1,10 @@
-from pagina import Pagina
+from paginador import Paginador
 
 class Tabla:
     
-    paginas = []
+    def __init__(self, paginador):
+        self.paginas = []
+        self.paginador = paginador
 
     def guardarRegistroEnPagina(self, registro):
         #Se guarda el registro en la una pagina con registro serializado

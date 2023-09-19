@@ -56,7 +56,7 @@ class MaquinaVirtual:
     def insertarRegistros(self, registro):
         #Inseta los nuevos datos a la tabla
         if self.registroEsValido(registro):
-            self.tabla.guardarRegistroEnPagina(registro)
+            self.tabla.guardarRegistroEnCache(registro)
             print("INSERT exitoso")
             
     def registroEsValido(self, datosAGuardar):

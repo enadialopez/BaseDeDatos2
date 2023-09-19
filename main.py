@@ -1,9 +1,11 @@
 from compilador import Compilador
 from maquinaVirtual import MaquinaVirtual
 from tabla import Tabla
+from paginador import Paginador
 
 def correrRepl():
-    tabla = Tabla()
+    paginador = Paginador()
+    tabla = Tabla(paginador)
     maquinaVirtual = MaquinaVirtual(tabla)
     compilador = Compilador(maquinaVirtual)
 
@@ -13,6 +15,7 @@ def correrRepl():
         query = input("sql>")
 
 def main():
+    paginador.leer_base_de_datos(base_de_datos)
     correrRepl()
 
 if __name__ == "__main__":
